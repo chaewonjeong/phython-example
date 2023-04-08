@@ -1,5 +1,4 @@
-score_file = open(
-    "files\score.txt", "w", encoding="utf-8")
+score_file = open("files\score.txt", "w", encoding="utf-8")
 
 print("수학 : 80", file=score_file)
 print("수학 : 80", file=score_file)
