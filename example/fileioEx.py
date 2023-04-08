@@ -1,4 +1,5 @@
-score_file = open("score.txt", "w", encoding="utf-8")
+score_file = open(
+    "files\score.txt", "w", encoding="utf-8")
 
 print("수학 : 80", file=score_file)
 print("수학 : 80", file=score_file)
@@ -20,7 +21,7 @@ score_file.close()
 
 
 # 파일 읽기
-score_file = open("score.txt", "r", encoding="utf-8")
+score_file = open("files\score.txt", "r", encoding="utf-8")
 # print(score_file.read())
 
 # 한 줄씩 읽기

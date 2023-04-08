@@ -8,13 +8,13 @@ raw text에 있는 내용을 프로그램을 돌릴 때 마다 파싱하여 필�
 근데 문자열이 아닌 객체를 파일에 쓸 수 없기에, pickle  모듈을 이용해 그 객체 자체를 바이너리로 저장하는 것이다.
 '''
 
-# profile_file = open("profile.pickle", "wb")
-# profile = {"이름": "박명수", "나이": 20, "취미": ["축구", "골프", "야구"]}
-# print(profile)
-# pickle.dump(profile, profile_file)  # profile에 있는 정보를 file에 저장
-# profile_file.close()
+profile_file = open("files\profile.pickle", "wb")
+profile = {"이름": "박명수", "나이": 20, "취미": ["축구", "골프", "야구"]}
+print(profile)
+pickle.dump(profile, profile_file)  # profile에 있는 정보를 file에 저장
+profile_file.close()
 
-profile_file = open("profile.pickle", "rb")
+profile_file = open("files\profile.pickle", "rb")
 profile = pickle.load(profile_file)  # file에 있는 정보를 profile에 불러오기
 print(profile)
 profile_file.close()
