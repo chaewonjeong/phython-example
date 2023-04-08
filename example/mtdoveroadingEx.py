@@ -14,7 +14,7 @@ class Unit:
     def move(self, location):
         print("[지상 유닛 이동]")
         print("{0} : {1} 방향으로 이동합니다. [속도 {2}]"
-               .format(self.name, location, self.speed))
+              .format(self.name, location, self.speed))
 
 
 # 공격 유닛 : 일반 유닛을 상속받아서 만들어짐
@@ -56,10 +56,17 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         AttackUnit.__init__(self, name, hp, 0, damage)  # 지상 speed 0
         Flyable.__init__(self, flying_speed)
 
+    def move(self, location):
+        print("[공중 유닛 이동]")
+        self.fly(self.name, location)
+
 
 # 벌쳐 : 지상 유닛, 기동성이 좋음
 vulture = AttackUnit("벌쳐", 80, 10, 20)
+print(vulture.speed)
 
 # 배틀크루져 : 공중 유닛
 battlecruiser = FlyableAttackUnit("배틀크루저", 500, 25, 3)
-battlecruiser.fly(battlecruiser.name, "5시")
+
+battlecruiser.move("3시")
+vulture.move("11시")
