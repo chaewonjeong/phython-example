@@ -1,4 +1,7 @@
 # 메서드 오버로딩 : 부모 클래스에서 정의한 메서드 말고 자식클래스에서 정의한 메서드를 쓰고싶을때 메서드를 새롭게 정의해서 쓰고 싶을때
+# 오버라이딩(overriding)이란 상속 관계에 있는 부모 클래스에서
+# 이미 정의된 메소드를 자식 클래스에서 같은 시그니쳐를 갖는 메소드로 다시 정의하는 것이라고 할 수 있습니다.
+# Unit class에서 정의된 move 메서드를 FlyableAttackUnit에서 재정의
 
 # 일반 유닛
 # 부모 클래스
@@ -56,6 +59,7 @@ class FlyableAttackUnit(AttackUnit, Flyable):
         AttackUnit.__init__(self, name, hp, 0, damage)  # 지상 speed 0
         Flyable.__init__(self, flying_speed)
 
+    # move 메서드에 대한 재정의
     def move(self, location):
         print("[공중 유닛 이동]")
         self.fly(self.name, location)
