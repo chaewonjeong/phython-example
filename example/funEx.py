@@ -46,3 +46,11 @@ print(balance)
 commisson, balance = withdraw_night(balance, 1000)
 print(balance)
 print(commisson)
+
+
+# function annotation(주석달기)
+def func(arg1: str, arg2: 1+2, arg3: str) -> bool:
+    print('this is function annotation')
+
+# annotation 의 가장 큰 특징은 바로 강제성이 없다는 것이다.
+# 즉, annotation 이라는 말그대로 주석일 뿐이며 해당 code 자체에는 어떠한 영향도 미치지 않는다.
